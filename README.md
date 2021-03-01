@@ -1,8 +1,7 @@
 # chesstest-vue-app
+#### _By JPN_
 
 Web version of [ChessTest](https://github.com/jpnicotra/ChessTest.git) developed in VueJs
-
-#### _By JPN_
 
 ## Installation
 
