@@ -1,6 +1,8 @@
 # chesstest-vue-app
+
+Web version of [ChessTest](https://github.com/jpnicotra/ChessTest.git) developed in VueJs
+
 #### _By JPN_
-ChessTest requires last version of [Maven](https://maven.apache.org/) to run.
 
 ## Installation
 
