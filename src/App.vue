@@ -81,7 +81,7 @@ Each row represents the movement of each side, starting with the white pieces.
   </b-card>
 </template>
 <script>
-import axios from "axios";
+import axios from "@/axios";
 import GameBoard from "./components/GameBoard.vue";
 
 export default {
@@ -102,7 +102,7 @@ export default {
     nextMove() {
       axios
         .get(
-          "http://localhost:8080/ChessTestBackend-0.0.1-SNAPSHOT/chess/nextMove/" +
+          "chess/nextMove/" +
             this.gameId
         )
         .then((response) => {
@@ -119,7 +119,7 @@ export default {
     uploadMoves() {
       axios
         .post(
-          "http://localhost:8080/ChessTestBackend-0.0.1-SNAPSHOT/chess/uploadMoves/" +
+          "chess/uploadMoves/" +
             this.gameId,
           this.moves
         )
@@ -136,7 +136,7 @@ export default {
       this.movesUploaded = false;
       axios
         .get(
-          "http://localhost:8080/ChessTestBackend-0.0.1-SNAPSHOT/chess/newGame"
+          "chess/newGame"
         )
         .then((response) => {
           this.gameId = response.data.gameId;
@@ -147,7 +147,7 @@ export default {
     getBoard() {
       axios
         .get(
-          "http://localhost:8080/ChessTestBackend-0.0.1-SNAPSHOT/chess/board/" +
+          "chess/board/" +
             this.gameId
         )
         .then((response) => {
@@ -155,7 +155,6 @@ export default {
         });
     },
   },
-  mounted() {},
 };
 </script>
 <style>
